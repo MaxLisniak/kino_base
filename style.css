@@ -1,0 +1,557 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    font-family: Tahoma;
+    background-image: url(img/bg-light.png);
+}
+
+
+/* HEADER */
+.logo{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: darkgray;
+}
+.slogan{
+    font-size: 0.9em;
+}
+.header1{
+    display: flex;
+    justify-content: center;
+    background-image: url("img/navbar-grey.png");
+    color: #6d6c6c;
+}
+.header2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 52px;
+    background-image: url("img/navbar-blue.png");
+}
+.header-logo-slogan{
+    justify-content: flex-start !important;
+    gap: 10px;
+}
+
+.header-block{
+    height: 36px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+header h1{
+    display: inline-block;
+}
+.header2 div{
+    justify-content: flex-start;
+}
+.header2 a, .header2 label{
+    padding-right: 10px;
+}
+.header2 input{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: none;
+}
+.header3{
+    height: 40px;
+    background-image: url(img/bg-light.png);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    color: #585858;
+}
+.header3 h3{
+    padding-left: 20%;
+}
+
+/* MAIN BANNER */
+.main-banner{
+    height: 270px;
+    width: 100%;
+    background-image: url(img/carousel1.jpg);
+}
+.swipe-area{
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.arrow-left, .arrow-right{
+    top: 120px;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrow-left{
+    left: 20px;
+}
+.arrow-right{
+    right: 20px;
+    transform: rotate(180deg);
+}
+
+/* BANNER */
+.banner-movie{
+    width: 300px;
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+.banner-movie-info{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+.banner-movie-info-title{
+    font-size: 1.1em;
+}
+.banner-movie-info-title-alt{
+    font-size: .9em;
+}
+.banner-movie-info-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.banner-movie-info-rating-numbers{
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+}
+.banner-movie-info-rating-number{
+    font-size: 2.5em;
+    padding: 3px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+}
+.banner-movie-info-rating-text{
+
+}
+.banner-movie-info-rating-stars{
+
+}
+.banner-movie-info-rating-count{
+
+}
+.banner-movie-info-description{
+    font-size: .8em;
+}
+.banner-movie-others{
+    padding-top: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.banner-movie-other{
+    border: solid 1px grey;
+}
+.wish-bar{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.box{
+    border-radius: 5px;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    padding-bottom: 50px;
+    gap: 20px;
+    grid-auto-columns: 1fr;
+    grid-template-rows: max-content max-content max-content 1fr;
+    grid-template-areas: 
+    "sug    sug         sug         upd"
+    "info   info-alt    info-alt    box-office"
+    "info   player      player      box-office"
+    "info   com         com         box-office"
+    "info   com-form    com-form    box-office";
+}
+
+/* MOVIE SUGGESTIONS */
+
+.movie-suggestions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    grid-area: sug;
+}
+.movie-suggestion-entry {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+.movie-suggestion-entry-title{
+    height: 40px;
+}
+.movie-suggestion-entry-poster {
+}
+.movie-suggestion-entry-description{
+    height: 80px;
+    font-size: .8em;
+}
+.movie-suggestion-entry-link{
+    background-color: black;
+    border-radius: 3px;
+    padding: 4px 10px;
+    max-width: fit-content;
+    color: white;
+}
+
+.side-box{
+    background-image: url("img/navbar-grey.png");
+    display: flex;
+    flex-direction: column; 
+    color: white;
+    gap: 10px;
+    padding: 10px;
+    font-size: .9em;
+}
+
+/* UPDATES BOX */
+
+.updates-box{
+    grid-area: upd;
+    justify-content: space-between;  
+}
+.updates-box-bar, .box-office-bar{
+    background-image: url(img/sub-header.png);
+    height: 35px;
+    text-align: right;
+    font-size: 1.1em;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    height: max-content;
+}
+.updates-box-bar p{
+}
+.updates-box-entry{
+    display: flex;
+    gap: 5px;
+}
+.updates-box-entry-title{
+    text-decoration: underline;
+}
+.updates-box-entry-poster{
+}
+.updates-box-entry-description{
+}
+.updates-box-see-all-link{
+    border-top: 2px solid black;
+    text-align: center;
+}
+
+/* SELCTED MOVIE INFO */
+
+.selected-movie-info{
+    grid-area: info;
+    background-image: url("img/navbar-grey.png");
+    color: white;
+    display: block;
+}
+.selected-movie-info-poster{
+    text-align: center;
+}
+.selected-movie-info p{
+    border-top: 2px solid black;
+    padding: 5px 0px;
+}
+.selected-movie-info-entry{
+
+}
+.selected-movie-info-entry-heading{
+
+}
+.selected-movie-info-entry-content, .selected-movie-info-box-office-entry-content{
+    color: #919191;
+}
+
+.selected-movie-info-box-office{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.selected-movie-info-box-office-entry{
+    width: 50%;
+}
+.selected-movie-info-box-office-entry-heading{
+}
+
+
+/* SELECTED MOVIE ALTERNTAIVE INFO*/
+
+.selected-movie-info-alt{
+    grid-area: info-alt;
+    background-color: white;
+    padding: 20px;
+    height: max-content;
+    font-size: .9em;
+}
+.selected-movie-info-alt-title{
+    padding-bottom: 20px;
+}
+.selected-movie-info-alt-title-primary{
+}
+.selected-movie-info-alt-title-alt{
+}
+.selected-movie-info-alt-description{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.selected-movie-info-alt-description-entry{
+    display: flex;
+}
+.selected-movie-info-alt-description-entry-heading{
+    width: 30%;
+}
+.selected-movie-info-alt-description-entry-content{
+    width: 70%;
+}
+.selected-movie-info-alt-plot{
+    padding-top: 20px;
+}
+.selected-movie-info-alt-plot-heading{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.selected-movie-info-alt-plot-content{
+
+}
+
+/* SELECTED MOVIE PLAYER */
+
+.selected-movie-player{
+    grid-area: player;
+    background-color: white;
+    height: auto;
+    position: relative;
+}
+.selected-movie-player-img{
+}
+.selected-movie-player-img img{
+    width: 100%;
+}
+.selected-movie-player-play-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* BOX OFFICE */
+.box-office{
+    grid-area: box-office;
+    background-color: white;
+    height: auto;
+}
+.box-office-list{
+    padding-left: 20px;
+}
+.box-office-list-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.box-office-list-item-bxofc-left{
+    width: 60%;
+}
+.box-office-list-item-bxofc-right{
+    width: 40%;
+    text-align: right;
+}
+.box-office-list-item-query-left{
+    width: 80%;
+}
+.box-office-list-item-query-right{
+    width: 20%;
+    text-align: right;
+}
+.box-office-list-item-query-left .alt-title,
+.box-office-list-item-bxofc-left .alt-title{
+    font-size: .9em;
+    color: rgb(177, 177, 177);
+}
+.box-office-comments{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.box-office-comment{
+}
+.box-office-comment-title{
+    font-size: 1.1em;
+    color: crimson;
+    padding-bottom: 5px;
+}
+.box-office-comment-body{
+    font-size: .9em;
+}
+.unordered{
+    list-style: none;
+}
+.query-list{
+    padding-left: 0;
+}
+.box-office-random-movie{
+}
+.box-office-random-movie-heading{
+    color: #757575;
+    font-size: 1.3em;
+}
+.box-office-random-movie-body{
+    position: relative;
+    height: 107px;
+}
+.box-office-random-movie-body-poster{
+    width: 100%;
+}
+.box-office-random-movie-body-title{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: #69696983;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.box-office-random-movie-next-link{
+    font-size: 0.8em;
+    text-align: right;
+}
+
+/* COMMENTS */
+
+.comments{
+    grid-area: com;
+    background-image: url("img/bg-darker.png");
+    padding: 10px;
+    padding-bottom: 0;
+}
+.comment{
+    padding-bottom: 10px;
+}
+.comment1{
+    padding-left: 15px;
+}
+.comment2{
+    padding-left: 50px;
+}
+.comment-container{
+    display: flex;
+    gap: 10px;
+}
+.comment-user-avatar{
+    width: fit-content;
+    
+}
+.comment-user-avatar img{
+    border-radius: 4px;
+}
+.comment-body{
+    font-size: .9em;
+    border-radius: 4px;
+}
+.comment1 .comment-body{
+    background-image: url("img/navbar-grey.png"); 
+    color: white;
+}
+.comment2 .comment-body{
+    background-image: url("img/bg-white.png"); 
+}
+.comment-body-bar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+}
+.comment-body-bar-user{
+}
+.comment-body-bar-user-name{
+}
+.comment-body-bar-date-time{
+    font-size: .8em;
+    text-align: right;
+}
+.comment-body-content{
+    padding: 5px;
+}
+.comment-reply-btn{
+    padding-left: 10px;
+    font-size: .8em;
+    color: purple;
+
+}
+
+/* COMMENT FORM */
+.comment-form{
+    grid-area: com-form;
+    background-image: url("img/bg-darker.png");
+    padding: 10px;
+}
+.comment-form textarea{
+    width: 100%;
+    height: 80px;
+}
+.comment-form input{
+    width: fit-content;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    background-color: rgb(21, 117, 243);
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+/* FOOTER */
+
+footer{
+    background-image: url("img/navbar-grey.png");
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 30px;
+    color: white;
+}
+.footer1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer-links-block{
+    display: flex;
+    flex-direction: column;
+}
+.footer-links-block-heading{
+    font-size: 1em;
+    color: rgb(143, 143, 143);
+    padding-bottom: 5px;
+}
+.footer-links-block-link{
+    text-decoration: underline;
+    font-size: .9em;
+}
